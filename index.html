@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - html print</title>
+  <link rel='stylesheet' href='https://kendo.cdn.telerik.com/2017.1.118/styles/kendo.common-material.min.css'>
+<link rel='stylesheet' href='https://kendo.cdn.telerik.com/2017.1.118/styles/kendo.material.min.css'>
+<link rel='stylesheet' href='https://kendo.cdn.telerik.com/2017.1.118/styles/kendo.material.mobile.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="example">
+  <div class="box wide hidden-on-narrow">
+    <div class="box-col">
+      <select id="paper" style="width: 100px;">
+        <option value="size-a4" selected>A4</option>
+        <option value="size-letter">Letter</option>
+        <option value="size-executive">Executive</option>
+      </select>
+    </div>
+    <div class="box-col">
+      <button class="export-pdf k-button" onclick="getPDF('.pdf-page')">Export</button>
+    </div>
+    <div class="box-col">
+      <button class="export-pdf k-button" onclick="getPrint('.pdf-page')">Print</button>
+    </div>    
+  </div>
+  <div class="page-container hidden-on-narrow">
+    <div class="pdf-page size-a4">
+      <div class="pdf-header">
+        <span class="company-logo">
+          Blauer See Delikatessen
+        </span>
+        <span class="invoice-number">Invoice #23543</span>
+      </div>
+      <div class="pdf-footer">
+        <p>Blauer See Delikatessen<br />
+          Lutzowplatz 456<br />
+          Berlin, Germany,  10785
+        </p>
+      </div>
+      <div class="for">
+        <h3>Invoice For</h3>
+        <p>Antonio Moreno<br />
+          Naucalpan de Juarez<br />
+          Mexico D.F., Mexico, 53500
+        </p>
+      </div>
+
+      <div class="from">
+        <h3>From</h3>
+        <p style="padding-bottom: 20px; border-bottom: 1px solid #e5e5e5;">Hanna Moos <br />
+          Lutzowplatz 456<br />
+          Berlin, Germany,  10785
+        </p>
+        <p style="padding-top: 20px;">
+          Invoice ID: 23543<br />
+          Invoice Date: 12.03.2014<br />
+          Due Date: 27.03.2014
+        </p>
+      </div>
+      <div class="pdf-body">
+        <div id="grid"></div>
+        <p style="color: blue;"> image </p>
+        <img src="http://www.arabianhsr.com/en/images/footer.gif" style="width: 400px; height: 50px;">
+        <p style="color: blue;"> backgroupd image </p>
+        <div class="kakao"></div>
+      </div>
+
+    </div>
+  </div>
+  <div class="responsive-message"></div>
+</div>
+<!-- partial -->
+  <script src='https://kendo.cdn.telerik.com/2017.1.223/js/jquery.min.js'></script>
+<script src='https://kendo.cdn.telerik.com/2017.1.223/js/jszip.min.js'></script>
+<script src='https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
